@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Torneo de Fútbol</title>
+    <!-- Enlace al archivo CSS -->
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+    <h1>Gestión de Torneo de Fútbol</h1>
+
+    <!-- Formulario para agregar equipos -->
+    <h2>Agregar Equipo</h2>
+    <input type="text" id="teamName" placeholder="Nombre del equipo">
+    <button onclick="addTeam()">Agregar</button>
+
+    <h2>Equipos</h2>
+    <ul id="teamList"></ul>
+
+    <!-- Formulario para modificar equipos -->
+    <h2>Modificar Equipo</h2>
+    <select id="editTeamSelector"></select>
+    <input type="text" id="newTeamName" placeholder="Nuevo nombre del equipo">
+    <button onclick="editTeam()">Modificar</button>
+    <button onclick="removeTeam()">Eliminar</button>
+
+    <!-- Formulario para registrar partidos -->
+    <h2>Registrar Partido</h2>
+    <select id="homeTeam"></select>
+    <select id="awayTeam"></select>
+    <input type="number" id="homeScore" placeholder="Goles Local" min="0">
+    <input type="number" id="awayScore" placeholder="Goles Visitante" min="0">
+    <button onclick="addMatch()">Registrar</button>
+
+    <h2>Partidos Registrados</h2>
+    <ul id="matchList"></ul>
+
+    <!-- Tabla de posiciones -->
+    <h2>Tabla de Posiciones</h2>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Equipo</th>
+                <th>Jugados</th>
+                <th>Ganados</th>
+                <th>Empates</th>
+                <th>Perdidos</th>
+                <th>Goles a Favor</th>
+                <th>Goles en Contra</th>
+                <th>Puntos</th>
+            </tr>
+        </thead>
+        <tbody id="standingsTable"></tbody>
+    </table>
+
+    <!-- Enlace al archivo JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>
